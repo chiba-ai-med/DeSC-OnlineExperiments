@@ -1,0 +1,1 @@
+Rscript src/plot_time_memory.R $@

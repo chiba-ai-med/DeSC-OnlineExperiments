@@ -1,0 +1,15 @@
+using OnlineNMF
+
+# Command line arguments
+infile = ARGS[1]
+outdir = dirname(ARGS[2])
+
+# Sparse DNMF
+out = sparse_dnmf(
+    input=infile,
+    graphv = 0, teru = 0, terv = 0,
+    l1u = 0, l1v = 0, l2u = 0, l2v = 0,
+    dim=10, beta=2, numepoch=1, binu=10^2, chunksize=100000)
+
+# Output
+OnlineNMF.output(outdir, out, 0)

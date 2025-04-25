@@ -1,0 +1,1 @@
+julia src/simulation_mm.jl $@
