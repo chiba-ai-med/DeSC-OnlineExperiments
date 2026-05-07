@@ -72,10 +72,3 @@ rule simulation_bincoo2bin:
         'logs/simulation_bincoo2bin_{row}.log'
     shell:
         'src/simulation_bincoo2bin.sh {input} {output} >& {log}'
-
-# 実データの方は手作業でコピー
-# Rows: 7581
-# Cols: 347,764,079
-# cp ../Desc_Investigation/data/coo_small.txt data/real/
-# ヘッダー行追加
-# val列追加
